@@ -1,0 +1,98 @@
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: #fff
+    z-index: 99
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__phone
+        display: block
+        font-size: 19px
+        +bold
+        text-decoration: none
+        color: $text-color
+        margin-bottom: 5px
+    &__mobile, &__landline
+        text-align: right
+    &__small-text
+        font-size: 14px
+        color: $text-color-light
+        text-decoration: none
+.menu
+    position: fixed
+    top: 80px
+    left: 0
+    z-index: 0
+    width: 100%
+    padding: 16px 0
+    background-color: $primary
+    transition: 1s
+    transform: translateY(-200%)
+    opacity: 0
+    &_active
+        transform: translateY(0)
+        opacity: 1
+    &__nav
+         display: flex
+         align-items: center
+         justify-content: space-around
+    &__link
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 17px
+        color: #fff
+    &-button
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        border: none
+        border-right: 1px solid #eee7f8
+        border-left: 1px solid #eee7f8
+        height: 80px
+        width: 70px
+        &__line
+            display: block
+            width: 20px
+            height: 2px
+            background-color: #507fe1
+            margin: 2px 0
+
+.logo
+    &__text
+        display: block
+        font-size: 18px
+        margin-bottom: 5px
+        text-transform: uppercase
+        +bold
+    &__description
+        display: block
+        font-size: 14px
+
+@media (max-width: 991px)
+    .navbar
+       &__mobile, &__landline
+           display: none
+
+@media (max-width: 576px)
+    .logo
+        display: none
+    .menu
+        top: 60px
+        &-button
+            height: 60px
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px    
+
+
+
+
+
+        
