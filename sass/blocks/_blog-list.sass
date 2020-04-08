@@ -1,0 +1,57 @@
+.blog
+    &__heading
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 50px
+    &__title
+        font-size: 24px
+        +bold
+    &__link-more
+        color: $primary
+        font-size: 16px
+    &-list
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__image
+            height: 200px
+        &__text
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            min-height: 80px
+        &__card
+            margin-bottom: 30px
+    &-card
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08)
+
+@media (max-width: 1199px)
+    .blog
+        &-list
+            justify-content: center
+
+            &__card
+                margin-right: 30px
+                margin-left: 30px
+                &:nth-child(1), &:nth-child(3)
+                    margin-right: 0        
+            &__image
+                 max-width: 100%
+                 height: auto
+
+@media (max-width: 768px)
+    .blog
+        &-list, &__heading
+            flex-direction: column
+            align-items: center
+        &-list
+            &__card
+                margin-right: 0
+                margin-left: 0       
+            &__image
+              
+
+
+
