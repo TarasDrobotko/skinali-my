@@ -15,5 +15,19 @@
 
 @media (max-width: 991px)
     .hero
-        background-size: 100%
-        background-position: top right
+        background: #f1f1f1 url('../img/hero/hero-bg-1.jpg') no-repeat
+        background-size: cover
+        background-position:  20% top
+        width: 100%
+        overflow: hidden
+        padding-bottom: 0
+        padding-top: 70px
+        &__title
+            margin-bottom: 30px
+        &__subtitle
+            margin-bottom: 35px
+
+@media (max-width: 576px)
+    .hero
+        background: #f1f1f1
+        text-align: center
