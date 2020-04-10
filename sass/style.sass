@@ -1,11 +1,31 @@
-// basic settings grid
+// mixins
+=desktop 
+  @media screen and (max-width: 1199px) 
+    @content
+
+=tablet 
+  @media screen and (max-width: 991px) 
+    @content
+
+=phone-lg 
+  @media screen and (max-width: 768px) 
+    @content
+
+=phone-m 
+  @media screen and (max-width: 576px) 
+    @content
+
+=phone-sm 
+  @media screen and (max-width: 400px) 
+    @content
+
+// import blocks
 @import 'grid'
 
 @import 'fonts'
 
 @import 'colors' 
 
-// settings of interface
 @import 'interface'
 
 @import 'blocks/navbar'
@@ -19,3 +39,5 @@
 @import 'blocks/catalog'
 
 @import 'blocks/blog-list'
+
+@import 'blocks/price'
