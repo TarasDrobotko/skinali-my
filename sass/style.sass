@@ -19,6 +19,11 @@
   @media screen and (max-width: 400px) 
     @content
 
+=pseudo($display: block, $pos: absolute, $content: '')
+    content: $content
+    display: $display
+    position: $pos
+
 // import blocks
 @import 'grid'
 
@@ -41,3 +46,5 @@
 @import 'blocks/blog-list'
 
 @import 'blocks/price'
+
+@import 'blocks/steps'
