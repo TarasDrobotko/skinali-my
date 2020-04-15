@@ -23,6 +23,7 @@ img
     color: $primary
     background-color: #fff
     text-decoration: none
+    cursor: pointer
 .button
     border:none
     text-decoration: none
@@ -49,8 +50,50 @@ img
     background: $bg-secondary
 .input
     height: 80px
-    padding-left: 30px
+    width: 100%
     border: 1px solid #dddddd
+    padding: 20px 30px
+.select
+    height: 80px
+    width: 100%
+    border-top: 1px solid #dddddd
+    border-bottom: 1px solid #dddddd
+    border-left: 1px solid #dddddd
+    position: relative
+    &:after
+        +pseudo 
+        top: 50%
+        right: 20px
+        width: 1rem
+        height: 1rem
+        border-top: .15rem solid #ddd
+        border-left: .15rem solid #ddd
+        transform: translate(0%, -50%) rotate(-135deg)
+    &:hover
+        cursor: pointer
+    &_checked
+        line-height: 80px
+        padding-left: 30px
+    &_caret:after
+         transform: rotate(45deg)
+    &__dropdown
+        position: absolute
+        top: 80px
+        width: 100%
+        background-color: #ffffff
+        border: 1px solid #dddddd
+        padding: 0
+        margin: 0
+        list-style: none
+        display: none
+        &_open
+            display: block
+
+    &__option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary
+
 .checkbox
     display: none
     &:checked + label:before
